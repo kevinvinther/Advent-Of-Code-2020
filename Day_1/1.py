@@ -14,11 +14,14 @@ def find_number(array):
                 print("Numbers multiplied:")
                 return i*y
 
-def find_number_3(array):
+def find_number_three(array):
     for i in advent_array: 
         for y in advent_array: 
             for z in advent_array:
                 if i + y + z == 2020:
                     return i*y*z 
+#Problem 1
+print(find_number(advent_array))
 
-print(find_number_3(advent_array))
+#Problem 2
+print(find_number_three(advent_array))
