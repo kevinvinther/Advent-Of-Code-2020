@@ -22,12 +22,17 @@ public class Day4 {
             passportInput.add(reader.nextLine());
         }
 
+        int i = 0; 
         for(String passport : passportInput) {
             if(!passport.isEmpty()) {
-                temporaryString += passport; 
+                temporaryString += passport + " "; 
             } else {
                 passports.add(temporaryString);
                 temporaryString = ""; 
+            }
+            i += 1; 
+            if(passportInput.size() == i) {
+                passports.add(temporaryString);
             }
         }
 
@@ -43,6 +48,7 @@ public class Day4 {
                     isValid = false; 
                 
             }
+            System.out.println(passport); 
             if(isValid) 
                 validPassports += 1; 
         }
